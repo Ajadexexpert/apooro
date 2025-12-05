@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page 1 | Dynamic Business Consult</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><img src="https://i.postimg.cc/pTBN17rt/Whats-App-Image-2025-09-21-at-08-28-40-f3a7c032.jpg" alt="Logo"></div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="landing1.html">Landing 1</a></li>
+      <li><a href="landing2.html">Landing 2</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Landing Page 1</h1>
+  <p>Explore our premier consulting solutions tailored for your business success.</p>
+  <a href="contact.html">Book a Consultation</a>
+</section>
+
+<section class="services">
+  <h2>Featured Services</h2>
+  <div class="card">
+    <img src="https://avatars.mds.yandex.net/i?id=f7b4ec8cfe2d77a0856095d2b29c68d180c69ea9-3725564-images-thumbs&n=13" alt="Service 1">
+    <h3>Strategy Planning</h3>
+    <p>In-depth analysis and planning to elevate your business performance.</p>
+  </div>
+  <div class="card">
+    <img src="https://avatars.mds.yandex.net/i?id=bd2d81cc9d9dd984beff7a1be7869ea180aa9223-4901993-images-thumbs&n=13" alt="Service 2">
+    <h3>Growth Solutions</h3>
+    <p>Customized solutions to increase market share and revenue.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+</footer>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+<script>
+const scrollBtn=document.getElementById('scrollTopBtn');
+window.onscroll=function(){scrollBtn.style.display=(document.body.scrollTop>200||document.documentElement.scrollTop>200)?'block':'none';}
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+</script>
+</body>
+</html>

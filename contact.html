@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Dynamic Business Consult</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><img src="https://i.postimg.cc/pTBN17rt/Whats-App-Image-2025-09-21-at-08-28-40-f3a7c032.jpg" alt="Logo"></div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="landing1.html">Landing 1</a></li>
+      <li><a href="landing2.html">Landing 2</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <div class="card">
+    <p>Email: contact@dynamicbusinessconsult.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Address: 123 Business Avenue, City, Country</p>
+  </div>
+  <div class="card">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+</footer>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+<script>
+const scrollBtn=document.getElementById('scrollTopBtn');
+window.onscroll=function(){scrollBtn.style.display=(document.body.scrollTop>200||document.documentElement.scrollTop>200)?'block':'none';}
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+</script>
+</body>
+</html>
