@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+  <img src="https://i.postimg.cc/52Zp1T2r/whatsapp.png" alt="WhatsApp">
+</a>
 
 <header>
   <nav>
@@ -27,16 +31,54 @@
 <section class="about">
   <h2>About Dynamic Business Consult</h2>
   <div class="card">
-    <img src="assets/stock5.jpg" alt="About Image">
+    <img src="https://i.postimg.cc/44wGCbxm/IMG-4062.jpg" alt="About Image">
     <p>We are a professional consulting firm focused on helping businesses scale and succeed. Our team of experts offers solutions in strategy planning, marketing, financial management, and operational efficiency.</p>
   </div>
   <div class="card">
+    <img src="https://i.postimg.cc/k5wsM466/IMG-4064.jpg" alt="About Image">
     <p>Our mission is to empower businesses with knowledge, strategy, and tools to achieve sustainable growth. We believe in measurable results, innovation, and personalized service for each client.</p>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About Dynamic Business Consult</h3>
+      <p>We provide business consulting, marketing solutions, and financial planning to help your enterprise grow and succeed.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: contact@dynamicbusinessconsult.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 Business St, Lagos, Nigeria</p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+  </div>
 </footer>
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <script>
@@ -44,6 +86,16 @@ const scrollBtn=document.getElementById('scrollTopBtn');
 window.onscroll=function(){scrollBtn.style.display=(document.body.scrollTop>200||document.documentElement.scrollTop>200)?'block':'none';}
 function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
 function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+// Slide-in WhatsApp icon on scroll
+const whatsappIcon = document.querySelector('.whatsapp-float');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // Show after scrolling 200px
+    whatsappIcon.classList.add('show');
+  } else {
+    whatsappIcon.classList.remove('show');
+  }
+});
 </script>
 </body>
 </html>
