@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Dynamic Business Consult</title>
+<link rel="shortcut icon" href="https://i.postimg.cc/pTBN17rt/Whats-App-Image-2025-09-21-at-08-28-40-f3a7c032.jpg" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
+  <img src="https://i.postimg.cc/52Zp1T2r/whatsapp.png" alt="WhatsApp">
+</a>
 
 <header>
   <nav>
@@ -27,24 +32,68 @@
 <section class="blog">
   <h2>Our Blog</h2>
   <div class="card">
-    <img src="assets/stock10.jpg" alt="Blog 1">
+    <img src="https://avatars.mds.yandex.net/i?id=60f95f8dd492d8699b14ad17448f2781bc03f97b-8406302-images-thumbs&n=13g" alt="Blog 1">
     <h3>5 Tips to Scale Your Business</h3>
     <p>Learn actionable strategies to take your business to the next level.</p>
   </div>
   <div class="card">
-    <img src="assets/stock11.jpg" alt="Blog 2">
+    <img src="https://avatars.mds.yandex.net/i?id=25a0459b71c393f0c524f94f21e759888fd9f611-5692725-images-thumbs&n=13" alt="Blog 2">
     <h3>Marketing Trends in 2025</h3>
     <p>Stay ahead of your competitors with the latest marketing insights.</p>
   </div>
   <div class="card">
-    <img src="assets/stock12.jpg" alt="Blog 3">
+    <img src="https://avatars.mds.yandex.net/i?id=7cecc742f4d6ba6ab6a06e941524b3f0223f3d79-10071889-images-thumbs&n=13" alt="Blog 3">
     <h3>Financial Planning Best Practices</h3>
     <p>Understand how to manage finances efficiently for growth.</p>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-about animate-fade">
+      <h3>About Dynamic Business Consult</h3>
+      <p>We provide business consulting, marketing solutions, and financial planning to help your enterprise grow and succeed.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links animate-slide-left">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact animate-slide-right">
+      <h3>Contact Us</h3>
+      <p>Email: contact@dynamicbusinessconsult.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 Business St, Lagos, Nigeria</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social animate-fade-up">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom animate-fade">
+    <p>© 2025 Dynamic Business Consult | All Rights Reserved</p>
+  </div>
 </footer>
 <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 <script>
@@ -52,6 +101,16 @@ const scrollBtn=document.getElementById('scrollTopBtn');
 window.onscroll=function(){scrollBtn.style.display=(document.body.scrollTop>200||document.documentElement.scrollTop>200)?'block':'none';}
 function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
 function toggleMenu(){document.getElementById('nav-links').classList.toggle('active');}
+// Slide-in WhatsApp icon on scroll
+const whatsappIcon = document.querySelector('.whatsapp-float');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // Show after scrolling 200px
+    whatsappIcon.classList.add('show');
+  } else {
+    whatsappIcon.classList.remove('show');
+  }
+});
 </script>
 </body>
 </html>
